@@ -4,11 +4,28 @@
   "homepage": "https://acme.com",
   "items": [
     {
+      "name": "init",
+      "type": "registry:theme",
+      "description": "This should initialize the theme for Pricefinder",
+      "files": [
+        {
+          "path": "registry/new-york/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "tailwind.config.ts",
+          "type": "registry:file",
+          "target": "~/tailwind.config.ts"
+        }
+      ]
+    },
+    {
       "name": "hello-world",
       "type": "registry:component",
       "title": "Hello World",
       "description": "A simple hello world component",
-      "registryDependencies": ["button"],
+      "registryDependencies": ["https://702b-180-190-227-194.ngrok-free.app/r/init.json", "button"],
       "files": [
         {
           "path": "registry/new-york/hello-world/hello-world.tsx",
@@ -22,7 +39,7 @@
       "title": "Example Form",
       "description": "A contact form with Zod validation.",
       "dependencies": ["zod"],
-      "registryDependencies": ["button", "input", "label", "textarea", "card"],
+      "registryDependencies": ["https://702b-180-190-227-194.ngrok-free.app/r/init.json", "button", "input", "label", "textarea", "card"],
       "files": [
         {
           "path": "registry/new-york/example-form/example-form.tsx",
@@ -35,7 +52,7 @@
       "type": "registry:component",
       "title": "Complex Component",
       "description": "A complex component showing hooks, libs and components.",
-      "registryDependencies": ["card"],
+      "registryDependencies": ["https://702b-180-190-227-194.ngrok-free.app/r/init.json", "card"],
       "files": [
         {
           "path": "registry/new-york/complex-component/page.tsx",
